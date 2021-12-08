@@ -169,6 +169,18 @@ ruleTester.run('deprecation', rule, {
     getValidTestCase(`
       const component = <Component/>;
     `),
+    getValidTestCase(`
+      export class Class1 {
+        /** @deprecated */
+        method(): void {
+        }
+      }
+      export class Class2 extends Class1 {
+        method(): void {
+        }
+      }
+      new Class2().method();
+    `),
   ],
   // Error cases. `// ERROR: x` marks the spot where the error occurs.
   invalid: [

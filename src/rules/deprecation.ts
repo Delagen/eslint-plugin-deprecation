@@ -262,7 +262,6 @@ function getCallExpression(
 
   if (parent && parent.type === 'MemberExpression' && parent.property === id) {
     callee = parent;
-    parent = ancestors.length > 1 ? ancestors[ancestors.length - 2] : undefined;
   }
 
   if (isCallExpression(parent, callee)) {
