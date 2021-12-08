@@ -9,5 +9,5 @@
     "types": [],
     "jsx": "preserve"
   },
-  "include": ["fixtures"]
+  "include": ["fixtures/file.tsx"]
 }

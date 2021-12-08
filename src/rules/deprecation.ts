@@ -132,7 +132,7 @@ function isDeclaration(
       // Prevent considering initializer, extends, or implements to be declaration
       return parent.id === id;
 
-    case 'ClassProperty':
+    case 'PropertyDefinition':
       // Prevent considering value to be a declaration
       return parent.key === id;
 
