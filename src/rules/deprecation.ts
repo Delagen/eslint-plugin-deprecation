@@ -64,7 +64,7 @@ function createRuleForIdentifier(
     // - Inside an import
     const isInsideImport = context
       .getAncestors()
-      .some(anc => anc.type.includes('Import'));
+      .some((anc) => anc.type.includes('Import'));
     // - At the spot where something is declared
     const isIdDeclaration =
       (id.type === 'Identifier' || id.type === 'JSXIdentifier') &&

@@ -170,14 +170,11 @@ ruleTester.run('deprecation', rule, {
       const component = <Component/>;
     `),
     getValidTestCase(`
-      export class Class1 {
-        /** @deprecated */
-        method(): void {
-        }
+      class Class1 {
+        /** @deprecated */ method() {}
       }
-      export class Class2 extends Class1 {
-        method(): void {
-        }
+      class Class2 extends Class1 {
+        method() {}
       }
       new Class2().method();
     `),
